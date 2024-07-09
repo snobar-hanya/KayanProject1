@@ -1,0 +1,30 @@
+﻿@model EntityModel.Class1
+
+@if (Model.Categories.Count() > 0 && Model != null)
+{
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Parent ID</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Categories)
+            {
+                <tr>
+                    <td>@item.ID</td>
+                    <td>@item.Name</td>
+                    <td>@item.ParentID</td>
+                    <td></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <h1>No Data</h1>
+}
